@@ -9,6 +9,13 @@ describe CD do
       expect(new_cd.album_name()).to(eq("Back in Black"))
     end
   end
+
+  describe('#artist') do
+    it('will take album name, artist as arguments and return artist') do
+      new_cd = CD.new("Back in Black", "ACDC")
+      expect(new_cd.artist()).to(eq("ACDC"))
+    end
+  end
 end
 
 
