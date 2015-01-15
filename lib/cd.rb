@@ -13,4 +13,12 @@ class CD
     @@cd_collection
   end
 
+  define_singleton_method(:all) do
+    @@cd_collection
+  end
+
+  define_singleton_method(:fetch_cds_by_album_name) do |album_name|
+
+  end
+
 end
