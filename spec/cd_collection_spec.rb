@@ -8,4 +8,11 @@ describe(CDCollection) do
       expect(new_cd.all()).to(eq({'Back in Black' => 'ACDC'}))
     end
   end
+
+  describe('#search_by_album') do
+    it('will return a whole album (name and artist) if found in the collection') do
+      new_cd_collection = CDCollection.new({'Back in Black' => 'ACDC', 'Physical Graffiti' => 'Led Zeppelin'})
+      expect(new_cd_collection.search_by_album('Back in Black')).to(eq(['Back in Black', 'ACDC']))
+    end
+  end
 end

@@ -8,4 +8,8 @@ class CDCollection
     @collection
   end
 
+  define_method(:search_by_album) do
+
+  end
+
 end
