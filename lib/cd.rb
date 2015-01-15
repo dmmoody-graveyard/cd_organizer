@@ -21,4 +21,8 @@ class CD
     @@cd_collection.select{|k,v| k == album_name}
   end
 
+  define_singleton_method(:fetch_cds_by_artist) do |artist|
+    @@cd_collection.select{|k,v| v == artist}
+  end
+
 end

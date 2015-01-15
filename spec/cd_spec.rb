@@ -50,7 +50,7 @@ describe CD do
       new_cd1.add()
       new_cd2 = CD.new('Highway to Hell', 'ACDC')
       new_cd2.add()
-      expect(CD.fetch_cds_by_artist('ACDC')).to(eq(['Back in Black', 'Highway to Hell']))
+      expect(CD.fetch_cds_by_artist('ACDC')).to(eq({"Back in Black" => "ACDC", "Highway to Hell" => "ACDC"}))
     end
   end
 end
