@@ -20,7 +20,7 @@ describe CD do
   describe('#add') do
     it('will take album name, artist as arguments and return in Class instance hash') do
       new_cd = CD.new("Back in Black", "ACDC")
-      expect(new_cd.add()).to(eq(new_cd))
+      expect(new_cd.add()).to(eq({new_cd.album_name() => new_cd.artist()}))
     end
   end
 end
