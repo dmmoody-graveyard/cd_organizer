@@ -43,6 +43,16 @@ describe CD do
       expect(CD.fetch_cds_by_album_name('Volcano')).to(eq({'Volcano' => 'Jimmy Buffet'}))
     end
   end
+
+  describe('.fetch_cds_by_artist') do
+    it('will return all CDs in the CD class collection that has artist value if found') do
+      new_cd1 = CD.new("Back in Black", "ACDC")
+      new_cd1.add()
+      new_cd2 = CD.new('Highway to Hell', 'ACDC')
+      new_cd2.add()
+      expect(CD.fetch_cds_by_artist('ACDC')).to(eq(['Back in Black', 'Highway to Hell']))
+    end
+  end
 end
 
 
