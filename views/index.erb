@@ -1,0 +1,9 @@
+<h1>CD Organizer</h1>
+
+<h2>List of CD's currently in your collection</h2>
+
+<ul>
+  <% @my_cd_collection.each() do |k, v| %>
+  <li class="cd"><%= k %> - <%= v %></li>
+  <% end %>
+</ul>
