@@ -18,7 +18,7 @@ class CD
   end
 
   define_singleton_method(:fetch_cds_by_album_name) do |album_name|
-
+    @@cd_collection.select{|k,v| k == album_name}
   end
 
 end
